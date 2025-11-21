@@ -7,6 +7,7 @@ Python implementation using Pygame
 import pygame
 import random
 import sys
+import os
 
 # Initialize Pygame
 pygame.init()
@@ -23,11 +24,50 @@ GREEN = (0, 255, 0)
 RED = (255, 0, 0)
 YELLOW = (255, 255, 0)
 PURPLE = (128, 0, 128)
+DARK_BLUE = (10, 10, 30)
 
 # Game settings
 PLAYER_SPEED = 5
 BULLET_SPEED = 7
 ENEMY_SPAWN_RATE = 0.02
+
+# Get the directory where the script is located
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ASSETS_DIR = os.path.join(SCRIPT_DIR, 'assets')
+
+# Image cache (loaded after display init)
+_IMAGES = {}
+
+# Load images (with fallback to None if not found)
+def load_image(filename):
+    """Load an image file, return None if not found"""
+    if filename in _IMAGES:
+        return _IMAGES[filename]
+    
+    try:
+        path = os.path.join(ASSETS_DIR, filename)
+        img = pygame.image.load(path).convert_alpha()
+        _IMAGES[filename] = img
+        return img
+    except (pygame.error, FileNotFoundError, Exception):
+        _IMAGES[filename] = None
+        return None
+
+def get_player_image():
+    """Get player sprite image"""
+    return load_image('player.png')
+
+def get_enemy_image():
+    """Get enemy sprite image"""
+    return load_image('enemy.png')
+
+def get_bullet_image():
+    """Get bullet sprite image"""
+    return load_image('bullet.png')
+
+def get_star_image():
+    """Get star sprite image"""
+    return load_image('star.png')
 
 
 class Player(pygame.sprite.Sprite):
@@ -35,10 +75,17 @@ class Player(pygame.sprite.Sprite):
     
     def __init__(self):
         super().__init__()
-        self.image = pygame.Surface((50, 50), pygame.SRCALPHA)
-        # Draw player ship (green rectangle with white triangle)
-        pygame.draw.rect(self.image, GREEN, (0, 0, 50, 50))
-        pygame.draw.polygon(self.image, WHITE, [(25, 0), (0, 50), (50, 50)])
+        
+        # Try to load image, fallback to drawn shape
+        player_img = get_player_image()
+        if player_img:
+            self.image = player_img.copy()
+        else:
+            self.image = pygame.Surface((50, 50), pygame.SRCALPHA)
+            # Draw player ship (green rectangle with white triangle)
+            pygame.draw.rect(self.image, GREEN, (0, 0, 50, 50))
+            pygame.draw.polygon(self.image, WHITE, [(25, 0), (0, 50), (50, 50)])
+        
         self.rect = self.image.get_rect()
         self.rect.centerx = SCREEN_WIDTH // 2
         self.rect.bottom = SCREEN_HEIGHT - 30
@@ -67,8 +114,15 @@ class Bullet(pygame.sprite.Sprite):
     
     def __init__(self, x, y):
         super().__init__()
-        self.image = pygame.Surface((4, 15))
-        self.image.fill(YELLOW)
+        
+        # Try to load image, fallback to drawn shape
+        bullet_img = get_bullet_image()
+        if bullet_img:
+            self.image = bullet_img.copy()
+        else:
+            self.image = pygame.Surface((4, 15))
+            self.image.fill(YELLOW)
+        
         self.rect = self.image.get_rect()
         self.rect.centerx = x
         self.rect.bottom = y
@@ -87,8 +141,15 @@ class Enemy(pygame.sprite.Sprite):
     
     def __init__(self):
         super().__init__()
-        self.image = pygame.Surface((40, 40))
-        self.image.fill(RED)
+        
+        # Try to load image, fallback to drawn shape
+        enemy_img = get_enemy_image()
+        if enemy_img:
+            self.image = enemy_img.copy()
+        else:
+            self.image = pygame.Surface((40, 40))
+            self.image.fill(RED)
+        
         self.rect = self.image.get_rect()
         self.rect.x = random.randint(0, SCREEN_WIDTH - 40)
         self.rect.y = -40
@@ -111,6 +172,15 @@ class Game:
         self.clock = pygame.time.Clock()
         self.font = pygame.font.Font(None, 36)
         self.small_font = pygame.font.Font(None, 24)
+        
+        # Create star background
+        self.stars = []
+        for _ in range(100):
+            x = random.randint(0, SCREEN_WIDTH)
+            y = random.randint(0, SCREEN_HEIGHT)
+            speed = random.uniform(0.5, 2.0)
+            self.stars.append([x, y, speed])
+        
         self.reset_game()
     
     def reset_game(self):
@@ -159,6 +229,13 @@ class Game:
         if self.game_over or self.paused:
             return
         
+        # Update stars
+        for star in self.stars:
+            star[1] += star[2]  # Move star down
+            if star[1] > SCREEN_HEIGHT:
+                star[1] = 0
+                star[0] = random.randint(0, SCREEN_WIDTH)
+        
         # Update all sprites
         self.all_sprites.update()
         
@@ -179,8 +256,16 @@ class Game:
     
     def draw(self):
         """Draw everything to the screen"""
-        # Clear screen
-        self.screen.fill(BLACK)
+        # Clear screen with dark blue space background
+        self.screen.fill(DARK_BLUE)
+        
+        # Draw stars
+        star_img = get_star_image()
+        for star in self.stars:
+            if star_img:
+                self.screen.blit(star_img, (int(star[0]), int(star[1])))
+            else:
+                pygame.draw.circle(self.screen, WHITE, (int(star[0]), int(star[1])), 1)
         
         # Draw all sprites
         self.all_sprites.draw(self.screen)
