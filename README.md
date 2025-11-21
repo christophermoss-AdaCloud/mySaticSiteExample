@@ -1,0 +1,2 @@
+# mySaticSiteExample
+example
