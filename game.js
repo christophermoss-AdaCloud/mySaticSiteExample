@@ -21,7 +21,6 @@ const player = {
 // Arrays for game objects
 let bullets = [];
 let enemies = [];
-let powerUps = [];
 
 // Input handling
 const keys = {};
@@ -73,7 +72,6 @@ function resetGame() {
     lives = 3;
     bullets = [];
     enemies = [];
-    powerUps = [];
     player.x = canvas.width / 2 - 25;
     player.y = canvas.height - 80;
     updateDisplay();
@@ -159,6 +157,9 @@ function updateEnemies() {
     
     enemies = enemies.filter(enemy => enemy.y < canvas.height);
     
+    const enemiesHit = new Set();
+    const bulletsHit = new Set();
+    
     enemies.forEach((enemy, enemyIndex) => {
         enemy.y += enemy.speed;
         
@@ -168,17 +169,17 @@ function updateEnemies() {
         
         // Check collision with bullets
         bullets.forEach((bullet, bulletIndex) => {
-            if (checkCollision(bullet, enemy)) {
-                bullets.splice(bulletIndex, 1);
-                enemies.splice(enemyIndex, 1);
+            if (checkCollision(bullet, enemy) && !enemiesHit.has(enemyIndex) && !bulletsHit.has(bulletIndex)) {
+                bulletsHit.add(bulletIndex);
+                enemiesHit.add(enemyIndex);
                 score += 10;
                 updateDisplay();
             }
         });
         
         // Check collision with player
-        if (checkCollision(player, enemy)) {
-            enemies.splice(enemyIndex, 1);
+        if (checkCollision(player, enemy) && !enemiesHit.has(enemyIndex)) {
+            enemiesHit.add(enemyIndex);
             lives--;
             updateDisplay();
             
@@ -187,6 +188,10 @@ function updateEnemies() {
             }
         }
     });
+    
+    // Remove hit entities
+    enemies = enemies.filter((_, index) => !enemiesHit.has(index));
+    bullets = bullets.filter((_, index) => !bulletsHit.has(index));
 }
 
 function checkCollision(obj1, obj2) {
