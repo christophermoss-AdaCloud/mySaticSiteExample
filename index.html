@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 12: SHUMP - Shoot 'Em Up Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Unit 12: SHUMP</h1>
+        <p class="subtitle">A Shoot 'Em Up Game</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>About the Game</h2>
+            <p>Welcome to SHUMP, an exciting shoot 'em up game developed as part of Unit 12. Experience fast-paced action as you navigate through waves of enemies and dodge incoming fire!</p>
+        </section>
+
+        <section class="game-container">
+            <h2>Game Area</h2>
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            <div class="controls">
+                <button id="startBtn">Start Game</button>
+                <button id="pauseBtn">Pause</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+            <div class="score-display">
+                <p>Score: <span id="score">0</span></p>
+                <p>Lives: <span id="lives">3</span></p>
+            </div>
+        </section>
+
+        <section class="instructions">
+            <h2>How to Play</h2>
+            <ul>
+                <li><strong>Arrow Keys:</strong> Move your ship</li>
+                <li><strong>Space Bar:</strong> Shoot</li>
+                <li><strong>ESC:</strong> Pause game</li>
+            </ul>
+            <h3>Objective</h3>
+            <p>Destroy enemy ships, avoid their fire, and survive as long as possible to achieve the highest score!</p>
+        </section>
+
+        <section class="features">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>🚀 Fast-Paced Action</h3>
+                    <p>Experience thrilling gameplay with increasing difficulty</p>
+                </div>
+                <div class="feature">
+                    <h3>🎯 Score System</h3>
+                    <p>Compete for high scores and track your progress</p>
+                </div>
+                <div class="feature">
+                    <h3>👾 Enemy Waves</h3>
+                    <p>Face challenging enemy patterns and behaviors</p>
+                </div>
+                <div class="feature">
+                    <h3>💥 Power-Ups</h3>
+                    <p>Collect power-ups to enhance your abilities</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Unit 12: SHUMP Project | Hosted on GitHub Pages</p>
+    </footer>
+
+    <script src="game.js"></script>
+</body>
+</html>
