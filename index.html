@@ -3,58 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 16: Python Flowcharts - Unit 14: Software Development</title>
+    <title>Lesson 16: Flowcharts (Part 1) - Unit 12: Software Development</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <h1>Unit 14: Software Development</h1>
-            <p class="course-info">FE College - Year 12</p>
+            <h1>Unit 12: Software Development</h1>
+            <p class="course-info">Ada, the National College for Digital Skills</p>
+            <p class="instructor-info">Christopher Moss</p>
+            <p class="date-info">27th November 2025</p>
         </div>
     </header>
 
     <nav>
         <ul>
+            <li><a href="#donow">Do Now</a></li>
             <li><a href="#overview">Overview</a></li>
-            <li><a href="#part1">Part 1: Flowchart Basics</a></li>
-            <li><a href="#part2">Part 2: Python Flowcharts</a></li>
-            <li><a href="#activities">Activities</a></li>
+            <li><a href="#part1">Flowchart Basics</a></li>
+            <li><a href="#example">RPS Example</a></li>
+            <li><a href="#task">Main Task</a></li>
             <li><a href="#summary">Summary</a></li>
         </ul>
     </nav>
 
     <main>
+        <section id="donow" class="lesson-section donow-section">
+            <h2>Do Now - 7 mins</h2>
+            <div class="donow-content">
+                <p><strong>Please complete the DONOW task on your desk</strong></p>
+            </div>
+        </section>
+
         <section id="overview" class="lesson-section">
-            <h2>Lesson 16: Python Flowcharts</h2>
+            <h2>16. Flowcharts (Part 1)</h2>
             <div class="learning-objectives">
-                <h3>Learning Objectives</h3>
-                <p>By the end of this lesson, you will be able to:</p>
-                <ul>
-                    <li>Understand what flowcharts are and why they are used in software development</li>
-                    <li>Identify and use standard flowchart symbols</li>
-                    <li>Create flowcharts to represent Python program logic</li>
-                    <li>Convert flowcharts into working Python code</li>
-                    <li>Use flowcharts to plan and debug programs</li>
-                </ul>
+                <h3>Today's Focus</h3>
+                <p>Today we are going to look at how flowcharts are used in <strong>game development</strong></p>
             </div>
         </section>
 
         <section id="part1" class="lesson-section">
-            <h2>Part 1: Flowchart Basics</h2>
+            <h2>What is a Flowchart?</h2>
             
             <div class="content-block">
-                <h3>What is a Flowchart?</h3>
-                <p>A <strong>flowchart</strong> is a visual diagram that represents the sequence of steps and decisions needed to perform a process. In programming, flowcharts help us plan our code before we write it, making it easier to understand and debug.</p>
-                
-                <div class="info-box">
-                    <h4>Why Use Flowcharts?</h4>
-                    <ul>
-                        <li><strong>Planning:</strong> Helps you think through the logic before coding</li>
-                        <li><strong>Communication:</strong> Easy way to explain your program to others</li>
-                        <li><strong>Documentation:</strong> Creates a visual record of how your program works</li>
-                        <li><strong>Debugging:</strong> Helps identify logical errors in your program</li>
-                    </ul>
+                <div class="definition-box">
+                    <p>A diagram that uses graphic symbols to depict the nature and flow of the steps in a process.</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Benefits of Using Flowcharts</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <h4>Promote Process Understanding</h4>
+                        <p>Visualize the logic of your program clearly</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Provide Outline for Steps</h4>
+                        <p>Create a blueprint for your program</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Identify Problem Areas</h4>
+                        <p>Spot improvement opportunities early</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Depict Whole Project</h4>
+                        <p>Show the complete program graphically</p>
+                    </div>
                 </div>
             </div>
 
@@ -67,386 +83,139 @@
                         <div class="symbol oval">Start/End</div>
                         <p><strong>Oval (Terminator)</strong></p>
                         <p>Marks the beginning or end of a program or process.</p>
-                        <code>Example: Start, End, Stop</code>
                     </div>
                     
                     <div class="symbol-card">
                         <div class="symbol rectangle">Process</div>
                         <p><strong>Rectangle (Process)</strong></p>
                         <p>Represents a process, action, or operation.</p>
-                        <code>Example: Calculate total, Set x = 5</code>
                     </div>
                     
                     <div class="symbol-card">
                         <div class="symbol diamond">Decision</div>
                         <p><strong>Diamond (Decision)</strong></p>
                         <p>Represents a decision or conditional statement.</p>
-                        <code>Example: Is x > 10?, Is user logged in?</code>
                     </div>
                     
                     <div class="symbol-card">
                         <div class="symbol parallelogram">Input/Output</div>
                         <p><strong>Parallelogram (Input/Output)</strong></p>
                         <p>Represents data input or output operations.</p>
-                        <code>Example: Input name, Print result</code>
                     </div>
                     
                     <div class="symbol-card">
                         <div class="symbol arrow">→</div>
                         <p><strong>Arrow (Flow Line)</strong></p>
                         <p>Shows the direction and sequence of steps.</p>
-                        <code>Connects symbols to show flow</code>
-                    </div>
-                    
-                    <div class="symbol-card">
-                        <div class="symbol connector">A</div>
-                        <p><strong>Circle (Connector)</strong></p>
-                        <p>Connects different parts of a flowchart.</p>
-                        <code>Used when flowchart spans multiple pages</code>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h3>Basic Flowchart Rules</h3>
-                <ol>
-                    <li>Every flowchart must have a <strong>Start</strong> and <strong>End</strong> symbol</li>
-                    <li>Arrows should flow from top to bottom and left to right when possible</li>
-                    <li>Decision symbols should have exactly two exit paths: <strong>Yes</strong> and <strong>No</strong></li>
-                    <li>All symbols should be connected with arrows (no floating symbols)</li>
-                    <li>Keep your flowchart neat and easy to follow</li>
-                </ol>
-            </div>
-        </section>
-
-        <section id="part2" class="lesson-section">
-            <h2>Part 2: Python Flowcharts</h2>
-            
-            <div class="content-block">
-                <h3>Mapping Flowcharts to Python Code</h3>
-                <p>Understanding how flowchart elements translate to Python code is essential for effective programming:</p>
-                
-                <table class="mapping-table">
-                    <thead>
-                        <tr>
-                            <th>Flowchart Element</th>
-                            <th>Python Equivalent</th>
-                            <th>Example</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Start/End</td>
-                            <td>Beginning/End of program or function</td>
-                            <td><code>def main():</code> / <code>return</code></td>
-                        </tr>
-                        <tr>
-                            <td>Process</td>
-                            <td>Assignment or calculation</td>
-                            <td><code>total = price * quantity</code></td>
-                        </tr>
-                        <tr>
-                            <td>Decision</td>
-                            <td>if/elif/else statements</td>
-                            <td><code>if age >= 18:</code></td>
-                        </tr>
-                        <tr>
-                            <td>Input</td>
-                            <td>input() function</td>
-                            <td><code>name = input("Enter name: ")</code></td>
-                        </tr>
-                        <tr>
-                            <td>Output</td>
-                            <td>print() function</td>
-                            <td><code>print("Hello, " + name)</code></td>
-                        </tr>
-                        <tr>
-                            <td>Loop (back arrow)</td>
-                            <td>while or for loop</td>
-                            <td><code>while count < 10:</code></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="content-block">
-                <h3>Example 1: Simple Input/Output Program</h3>
-                <div class="example-container">
-                    <div class="flowchart-description">
-                        <h4>Flowchart Steps:</h4>
-                        <ol>
-                            <li><span class="step-type oval-step">Start</span></li>
-                            <li><span class="step-type para-step">Input: Get user's name</span></li>
-                            <li><span class="step-type para-step">Output: Display greeting</span></li>
-                            <li><span class="step-type oval-step">End</span></li>
-                        </ol>
-                    </div>
-                    <div class="code-example">
-                        <h4>Python Code:</h4>
-                        <pre><code class="python"># Simple greeting program
-name = input("What is your name? ")
-print("Hello, " + name + "! Welcome to Python!")</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h3>Example 2: Decision Making (if/else)</h3>
-                <div class="example-container">
-                    <div class="flowchart-description">
-                        <h4>Flowchart Steps:</h4>
-                        <ol>
-                            <li><span class="step-type oval-step">Start</span></li>
-                            <li><span class="step-type para-step">Input: Get user's age</span></li>
-                            <li><span class="step-type diamond-step">Decision: Is age >= 18?</span></li>
-                            <li><span class="step-type para-step">Yes → Output: "You can vote"</span></li>
-                            <li><span class="step-type para-step">No → Output: "Too young to vote"</span></li>
-                            <li><span class="step-type oval-step">End</span></li>
-                        </ol>
-                    </div>
-                    <div class="code-example">
-                        <h4>Python Code:</h4>
-                        <pre><code class="python"># Voting eligibility checker
-age = int(input("Enter your age: "))
-
-if age >= 18:
-    print("You are eligible to vote!")
-else:
-    print("You are too young to vote.")
-    years_left = 18 - age
-    print(f"You can vote in {years_left} years.")</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h3>Example 3: Loops (Repetition)</h3>
-                <div class="example-container">
-                    <div class="flowchart-description">
-                        <h4>Flowchart Steps:</h4>
-                        <ol>
-                            <li><span class="step-type oval-step">Start</span></li>
-                            <li><span class="step-type rect-step">Process: Set counter = 1</span></li>
-                            <li><span class="step-type diamond-step">Decision: Is counter <= 5?</span></li>
-                            <li><span class="step-type para-step">Yes → Output: Display counter</span></li>
-                            <li><span class="step-type rect-step">Process: Add 1 to counter</span></li>
-                            <li><em>Arrow loops back to step 3</em></li>
-                            <li><span class="step-type para-step">No → Output: "Finished counting"</span></li>
-                            <li><span class="step-type oval-step">End</span></li>
-                        </ol>
-                    </div>
-                    <div class="code-example">
-                        <h4>Python Code:</h4>
-                        <pre><code class="python"># Counting program using while loop
-counter = 1
-
-while counter <= 5:
-    print(f"Count: {counter}")
-    counter = counter + 1
-
-print("Finished counting!")
-
-# Alternative using for loop
-for i in range(1, 6):
-    print(f"Count: {i}")
-print("Finished counting!")</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h3>Example 4: Combining Decisions and Loops</h3>
-                <div class="example-container">
-                    <div class="flowchart-description">
-                        <h4>Program: Number Guessing Game</h4>
-                        <ol>
-                            <li><span class="step-type oval-step">Start</span></li>
-                            <li><span class="step-type rect-step">Process: Set secret_number = 7</span></li>
-                            <li><span class="step-type para-step">Input: Get user's guess</span></li>
-                            <li><span class="step-type diamond-step">Decision: Is guess == secret_number?</span></li>
-                            <li><span class="step-type para-step">No → Output: "Try again"</span></li>
-                            <li><em>Arrow loops back to step 3</em></li>
-                            <li><span class="step-type para-step">Yes → Output: "Correct!"</span></li>
-                            <li><span class="step-type oval-step">End</span></li>
-                        </ol>
-                    </div>
-                    <div class="code-example">
-                        <h4>Python Code:</h4>
-                        <pre><code class="python"># Number guessing game
-secret_number = 7
-guess = 0
-
-while guess != secret_number:
-    guess = int(input("Guess the number (1-10): "))
-    
-    if guess < secret_number:
-        print("Too low! Try again.")
-    elif guess > secret_number:
-        print("Too high! Try again.")
-    else:
-        print("Correct! Well done!")
-
-print("Game Over")</code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h3>Best Practices for Python Flowcharts</h3>
-                <div class="best-practices">
-                    <div class="practice-item">
-                        <h4>1. Start Simple</h4>
-                        <p>Begin with the main steps, then add details. Don't try to include everything at once.</p>
-                    </div>
-                    <div class="practice-item">
-                        <h4>2. Use Consistent Symbols</h4>
-                        <p>Always use the correct symbol for each type of action to maintain clarity.</p>
-                    </div>
-                    <div class="practice-item">
-                        <h4>3. Keep It Readable</h4>
-                        <p>Use clear, concise text inside symbols. Avoid lengthy descriptions.</p>
-                    </div>
-                    <div class="practice-item">
-                        <h4>4. Test Your Logic</h4>
-                        <p>Trace through your flowchart with sample data before writing code.</p>
-                    </div>
-                    <div class="practice-item">
-                        <h4>5. Match Your Code</h4>
-                        <p>Update your flowchart if you change your code, and vice versa.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="activities" class="lesson-section">
-            <h2>Activities</h2>
+        <section id="example" class="lesson-section">
+            <h2>Flowchart Example: Rock, Paper, Scissors</h2>
             
-            <div class="activity-card">
-                <h3>Activity 1: Symbol Identification</h3>
-                <p>Match each flowchart symbol to its correct meaning and Python equivalent.</p>
-                <div class="activity-content">
-                    <p>Draw the following symbols and label them:</p>
-                    <ol>
-                        <li>The symbol for a decision</li>
-                        <li>The symbol for input/output</li>
-                        <li>The symbol for a process</li>
-                        <li>The symbol for start/end</li>
+            <div class="content-block">
+                <h3>Basic Flowchart Structure for Rock, Paper, Scissors</h3>
+                <div class="rps-flowchart">
+                    <ol class="flowchart-steps">
+                        <li><span class="step-type oval-step">Start</span> (Oval)</li>
+                        <li><span class="step-type para-step">Player 1 Input</span> (Parallelogram)</li>
+                        <li><span class="step-type para-step">Player 2 Input</span> (Parallelogram)</li>
+                        <li><span class="step-type diamond-step">Decision: Does Player 1 win?</span> (Diamond)
+                            <ul>
+                                <li><strong>Yes →</strong> <span class="step-type para-step">Display "Player 1 Wins!"</span> (Parallelogram) → <span class="step-type oval-step">End</span> (Oval)</li>
+                                <li><strong>No →</strong> <span class="step-type diamond-step">Decision: Does Player 2 win?</span> (Diamond)
+                                    <ul>
+                                        <li><strong>Yes →</strong> <span class="step-type para-step">Display "Player 2 Wins!"</span> (Parallelogram) → <span class="step-type oval-step">End</span> (Oval)</li>
+                                        <li><strong>No →</strong> <span class="step-type para-step">Display "Draw!"</span> (Parallelogram) → <span class="step-type oval-step">End</span> (Oval)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
                     </ol>
                 </div>
             </div>
+        </section>
 
-            <div class="activity-card">
-                <h3>Activity 2: Create a Flowchart</h3>
-                <p>Create a flowchart for the following program requirement:</p>
-                <div class="activity-content">
-                    <blockquote>
-                        "Write a program that asks the user for a temperature in Celsius. 
-                        If the temperature is below 0, display 'Freezing!'. 
-                        If it's between 0 and 20, display 'Cold'. 
-                        If it's above 20, display 'Warm'."
-                    </blockquote>
+        <section id="task" class="lesson-section">
+            <h2>Main Task (30/35 mins)</h2>
+            
+            <div class="task-instructions">
+                <p><strong>Choose one of the following simple games and create a flowchart using:</strong></p>
+                <a href="https://app.diagrams.net/" target="_blank" class="tool-link">https://app.diagrams.net/</a>
+            </div>
+
+            <div class="game-options">
+                <div class="game-card">
+                    <h3>🪙 Coin Flip Prediction</h3>
+                    <p>User predicts heads or tails, computer flips</p>
+                </div>
+                <div class="game-card">
+                    <h3>🔢 Number Guessing Game</h3>
+                    <p>User guesses a secret number</p>
+                </div>
+                <div class="game-card">
+                    <h3>🎲 Simple Dice Roll Game</h3>
+                    <p>Higher or Lower prediction</p>
+                </div>
+                <div class="game-card">
+                    <h3>🤔 Two Truths and a Lie</h3>
+                    <p>Guess the Lie</p>
+                </div>
+                <div class="game-card">
+                    <h3>🧮 Basic Calculator Operation</h3>
+                    <p>Simple math operations</p>
                 </div>
             </div>
 
-            <div class="activity-card">
-                <h3>Activity 3: Flowchart to Python</h3>
-                <p>Convert the following flowchart steps into working Python code:</p>
-                <div class="activity-content">
-                    <ol>
-                        <li>Start</li>
-                        <li>Input: Get two numbers (num1 and num2)</li>
-                        <li>Process: Calculate sum = num1 + num2</li>
-                        <li>Process: Calculate average = sum / 2</li>
-                        <li>Output: Display the average</li>
-                        <li>End</li>
-                    </ol>
+            <div class="task-levels">
+                <div class="level-card basic">
+                    <h4>Basic</h4>
+                    <p>Create the flowchart for a simple program</p>
+                </div>
+                <div class="level-card challenging">
+                    <h4>Challenging</h4>
+                    <p>Create a well-mapped flowchart with correct syntax</p>
+                </div>
+                <div class="level-card extension">
+                    <h4>Extension</h4>
+                    <p>Map your pygame project idea using a flowchart</p>
                 </div>
             </div>
 
-            <div class="activity-card">
-                <h3>Activity 4: Debug the Flowchart</h3>
-                <p>The following flowchart logic is incorrect. Identify the error and fix it:</p>
-                <div class="activity-content">
-                    <p><strong>Program Goal:</strong> Print numbers from 1 to 5</p>
-                    <ol>
-                        <li>Start</li>
-                        <li>Set count = 1</li>
-                        <li>Print count</li>
-                        <li>Add 1 to count</li>
-                        <li>Is count <= 5? Yes → Go to step 3</li>
-                        <li>End</li>
-                    </ol>
-                    <p><em>Hint: What happens when count becomes 6?</em></p>
-                </div>
-            </div>
-
-            <div class="activity-card">
-                <h3>Extension Activity: Password Validator</h3>
-                <p>Create both a flowchart and Python code for a password validator that:</p>
-                <div class="activity-content">
-                    <ul>
-                        <li>Asks the user to enter a password</li>
-                        <li>Checks if the password is at least 8 characters long</li>
-                        <li>If valid, displays "Password accepted"</li>
-                        <li>If invalid, asks the user to try again (loops back)</li>
-                        <li>After 3 failed attempts, displays "Too many attempts" and ends</li>
-                    </ul>
-                </div>
+            <div class="submit-reminder">
+                <p><strong>📸 Please submit a screenshot of your flowchart to the classroom before the end of the session</strong></p>
             </div>
         </section>
 
         <section id="summary" class="lesson-section">
             <h2>Lesson Summary</h2>
             
-            <div class="summary-content">
-                <h3>Key Points to Remember</h3>
-                <div class="key-points">
-                    <div class="key-point">
-                        <h4>Flowcharts Are Visual Plans</h4>
-                        <p>They help you plan, communicate, and debug your programs before and after coding.</p>
-                    </div>
-                    <div class="key-point">
-                        <h4>Standard Symbols</h4>
-                        <p>Oval = Start/End, Rectangle = Process, Diamond = Decision, Parallelogram = Input/Output</p>
-                    </div>
-                    <div class="key-point">
-                        <h4>Python Mapping</h4>
-                        <p>Decisions become if/else statements, loops use back-arrows, processes are assignments.</p>
-                    </div>
-                    <div class="key-point">
-                        <h4>Practice Makes Perfect</h4>
-                        <p>The more flowcharts you create and convert to code, the better programmer you'll become.</p>
-                    </div>
-                </div>
+            <div class="plenary-section">
+                <h3>Python Playground Plenary</h3>
+                <p>Join the Python playground plenary session</p>
             </div>
 
-            <div class="homework-section">
-                <h3>Homework</h3>
-                <p>Complete the following tasks before the next lesson:</p>
-                <ol>
-                    <li>Finish all activities from today's lesson</li>
-                    <li>Create a flowchart for a program of your choice (at least 6 steps)</li>
-                    <li>Write the Python code that matches your flowchart</li>
-                    <li>Test your code and note any changes you needed to make</li>
-                </ol>
-            </div>
-
-            <div class="next-lesson">
-                <h3>Next Lesson Preview</h3>
-                <p>In <strong>Lesson 17</strong>, we will explore more complex flowcharts including:</p>
+            <div class="notes-section">
+                <h3>Notes</h3>
                 <ul>
-                    <li>Nested decisions (if statements inside if statements)</li>
-                    <li>Functions and modular flowcharts</li>
-                    <li>Error handling in flowcharts</li>
+                    <li>Arrival time 88%</li>
+                    <li>ILPs - 5 mins each</li>
+                    <li>Homework</li>
                 </ul>
+            </div>
+
+            <div class="closing-message">
+                <h3>Well done and keep coding!</h3>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 Unit 14: Software Development - FE College Year 12</p>
-            <p>Lesson 16: Python Flowcharts (Part 1 & 2)</p>
+            <p>&copy; 2025 Unit 12: Software Development - Ada, the National College for Digital Skills</p>
+            <p>Lesson 16: Flowcharts (Part 1) - Christopher Moss</p>
         </div>
     </footer>
 </body>

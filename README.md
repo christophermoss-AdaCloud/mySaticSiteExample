@@ -1,41 +1,51 @@
-# Lesson 16: Python Flowcharts
+# Lesson 16: Flowcharts (Part 1)
 
-## Unit 14: Software Development - FE College Year 12
+## Unit 12: Software Development - Ada, the National College for Digital Skills
 
-This static website contains educational content for **Lesson 16: Python Flowcharts (Part 1 & 2)**.
+**Instructor:** Christopher Moss  
+**Date:** 27th November 2025
 
-### Learning Objectives
+This static website contains educational content for **Lesson 16: Flowcharts (Part 1)**.
 
-By the end of this lesson, students will be able to:
-- Understand what flowcharts are and why they are used in software development
-- Identify and use standard flowchart symbols
-- Create flowcharts to represent Python program logic
-- Convert flowcharts into working Python code
-- Use flowcharts to plan and debug programs
+### Today's Focus
+
+Today we are going to look at how flowcharts are used in **game development**.
 
 ### Content Overview
 
-#### Part 1: Flowchart Basics
-- What is a flowchart?
-- Standard flowchart symbols (Oval, Rectangle, Diamond, Parallelogram, Arrow, Connector)
-- Basic flowchart rules
+#### What is a Flowchart?
+A diagram that uses graphic symbols to depict the nature and flow of the steps in a process.
 
-#### Part 2: Python Flowcharts
-- Mapping flowcharts to Python code
-- Examples of simple input/output programs
-- Decision making (if/else)
-- Loops and repetition
-- Combining decisions and loops
-- Best practices for Python flowcharts
+#### Benefits of Using Flowcharts
+- Promote process understanding
+- Provide outline for steps of program
+- Identify problem areas and improvement opportunities
+- Depict whole project graphically
 
-### Activities
+#### Standard Flowchart Symbols
+- Oval (Start/End)
+- Rectangle (Process)
+- Diamond (Decision)
+- Parallelogram (Input/Output)
+- Arrow (Flow Line)
 
-The lesson includes several hands-on activities:
-1. Symbol Identification
-2. Create a Flowchart
-3. Flowchart to Python
-4. Debug the Flowchart
-5. Extension Activity: Password Validator
+#### Example: Rock, Paper, Scissors Flowchart
+A complete flowchart example showing game logic with decision points.
+
+### Main Task (30/35 mins)
+
+Create a flowchart using [diagrams.net](https://app.diagrams.net/) for one of the following:
+
+1. 🪙 Coin Flip Prediction
+2. 🔢 Number Guessing Game
+3. 🎲 Simple Dice Roll Game (Higher or Lower)
+4. 🤔 Two Truths and a Lie (Guess the Lie)
+5. 🧮 Basic Calculator Operation
+
+#### Task Levels
+- **Basic:** Create the flowchart for a simple program
+- **Challenging:** Create a well-mapped flowchart with correct syntax
+- **Extension:** Map your pygame project idea using a flowchart
 
 ### How to View
 

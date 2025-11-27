@@ -30,6 +30,18 @@ header {
     opacity: 0.9;
 }
 
+.instructor-info {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+.date-info {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 0.25rem;
+}
+
 /* Navigation Styles */
 nav {
     background-color: #34495e;
@@ -520,4 +532,224 @@ footer {
         color: #333;
         border-top: 1px solid #ccc;
     }
+}
+
+/* DoNow Section */
+.donow-section {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+}
+
+.donow-section h2 {
+    color: white;
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+.donow-content {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.3rem;
+}
+
+/* Definition Box */
+.definition-box {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.benefit-item {
+    background: #e8f4fd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    text-align: center;
+}
+
+.benefit-item h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* RPS Flowchart */
+.rps-flowchart {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid #3498db;
+}
+
+.flowchart-steps {
+    margin-left: 1.5rem;
+}
+
+.flowchart-steps li {
+    margin-bottom: 0.75rem;
+}
+
+.flowchart-steps ul {
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+/* Task Section */
+.task-instructions {
+    text-align: center;
+    background: #e8f4fd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.tool-link {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.tool-link:hover {
+    background: #2980b9;
+}
+
+/* Game Options */
+.game-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.game-card {
+    background: white;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(52, 152, 219, 0.3);
+}
+
+.game-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.game-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Task Levels */
+.task-levels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.level-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.level-card.basic {
+    background: #d5f4e6;
+    border: 2px solid #27ae60;
+}
+
+.level-card.challenging {
+    background: #fff3cd;
+    border: 2px solid #f39c12;
+}
+
+.level-card.extension {
+    background: #fadbd8;
+    border: 2px solid #e74c3c;
+}
+
+.level-card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Submit Reminder */
+.submit-reminder {
+    background: #2c3e50;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Plenary Section */
+.plenary-section {
+    background: #e8f4fd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.plenary-section h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* Notes Section */
+.notes-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.notes-section h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.notes-section ul {
+    margin-left: 1.5rem;
+}
+
+.notes-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Closing Message */
+.closing-message {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.closing-message h3 {
+    font-size: 1.5rem;
 }
