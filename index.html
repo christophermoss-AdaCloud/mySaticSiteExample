@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 16: Flowcharts (Part 1) - Unit 12: Software Development</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Unit 12: Software Development</h1>
+            <p class="course-info">Ada, the National College for Digital Skills</p>
+            <p class="instructor-info">Christopher Moss</p>
+            <p class="date-info">27th November 2025</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#donow">Do Now</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#part1">Flowchart Basics</a></li>
+            <li><a href="#example">RPS Example</a></li>
+            <li><a href="#task">Main Task</a></li>
+            <li><a href="#summary">Summary</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="donow" class="lesson-section donow-section">
+            <h2>Do Now - 7 mins</h2>
+            <div class="donow-content">
+                <p><strong>Please complete the DONOW task on your desk</strong></p>
+            </div>
+        </section>
+
+        <section id="overview" class="lesson-section">
+            <h2>16. Flowcharts (Part 1)</h2>
+            <div class="learning-objectives">
+                <h3>Today's Focus</h3>
+                <p>Today we are going to look at how flowcharts are used in <strong>game development</strong></p>
+            </div>
+        </section>
+
+        <section id="part1" class="lesson-section">
+            <h2>What is a Flowchart?</h2>
+            
+            <div class="content-block">
+                <div class="definition-box">
+                    <p>A diagram that uses graphic symbols to depict the nature and flow of the steps in a process.</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Benefits of Using Flowcharts</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <h4>Promote Process Understanding</h4>
+                        <p>Visualize the logic of your program clearly</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Provide Outline for Steps</h4>
+                        <p>Create a blueprint for your program</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Identify Problem Areas</h4>
+                        <p>Spot improvement opportunities early</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Depict Whole Project</h4>
+                        <p>Show the complete program graphically</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Standard Flowchart Symbols</h3>
+                <p>Flowcharts use standard symbols that have specific meanings:</p>
+                
+                <div class="symbols-grid">
+                    <div class="symbol-card">
+                        <div class="symbol oval">Start/End</div>
+                        <p><strong>Oval (Terminator)</strong></p>
+                        <p>Marks the beginning or end of a program or process.</p>
+                    </div>
+                    
+                    <div class="symbol-card">
+                        <div class="symbol rectangle">Process</div>
+                        <p><strong>Rectangle (Process)</strong></p>
+                        <p>Represents a process, action, or operation.</p>
+                    </div>
+                    
+                    <div class="symbol-card">
+                        <div class="symbol diamond">Decision</div>
+                        <p><strong>Diamond (Decision)</strong></p>
+                        <p>Represents a decision or conditional statement.</p>
+                    </div>
+                    
+                    <div class="symbol-card">
+                        <div class="symbol parallelogram">Input/Output</div>
+                        <p><strong>Parallelogram (Input/Output)</strong></p>
+                        <p>Represents data input or output operations.</p>
+                    </div>
+                    
+                    <div class="symbol-card">
+                        <div class="symbol arrow">→</div>
+                        <p><strong>Arrow (Flow Line)</strong></p>
+                        <p>Shows the direction and sequence of steps.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="example" class="lesson-section">
+            <h2>Flowchart Example: Rock, Paper, Scissors</h2>
+            
+            <div class="content-block">
+                <h3>Basic Flowchart Structure for Rock, Paper, Scissors</h3>
+                <div class="rps-flowchart">
+                    <ol class="flowchart-steps">
+                        <li><span class="step-type oval-step">Start</span> (Oval)</li>
+                        <li><span class="step-type para-step">Player 1 Input</span> (Parallelogram)</li>
+                        <li><span class="step-type para-step">Player 2 Input</span> (Parallelogram)</li>
+                        <li><span class="step-type diamond-step">Decision: Does Player 1 win?</span> (Diamond)
+                            <ul>
+                                <li><strong>Yes →</strong> <span class="step-type para-step">Display "Player 1 Wins!"</span> (Parallelogram) → <span class="step-type oval-step">End</span> (Oval)</li>
+                                <li><strong>No →</strong> <span class="step-type diamond-step">Decision: Does Player 2 win?</span> (Diamond)
+                                    <ul>
+                                        <li><strong>Yes →</strong> <span class="step-type para-step">Display "Player 2 Wins!"</span> (Parallelogram) → <span class="step-type oval-step">End</span> (Oval)</li>
+                                        <li><strong>No →</strong> <span class="step-type para-step">Display "Draw!"</span> (Parallelogram) → <span class="step-type oval-step">End</span> (Oval)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="task" class="lesson-section">
+            <h2>Main Task (30/35 mins)</h2>
+            
+            <div class="task-instructions">
+                <p><strong>Choose one of the following simple games and create a flowchart using:</strong></p>
+                <a href="https://app.diagrams.net/" target="_blank" class="tool-link">https://app.diagrams.net/</a>
+            </div>
+
+            <div class="game-options">
+                <div class="game-card">
+                    <h3>🪙 Coin Flip Prediction</h3>
+                    <p>User predicts heads or tails, computer flips</p>
+                </div>
+                <div class="game-card">
+                    <h3>🔢 Number Guessing Game</h3>
+                    <p>User guesses a secret number</p>
+                </div>
+                <div class="game-card">
+                    <h3>🎲 Simple Dice Roll Game</h3>
+                    <p>Higher or Lower prediction</p>
+                </div>
+                <div class="game-card">
+                    <h3>🤔 Two Truths and a Lie</h3>
+                    <p>Guess the Lie</p>
+                </div>
+                <div class="game-card">
+                    <h3>🧮 Basic Calculator Operation</h3>
+                    <p>Simple math operations</p>
+                </div>
+            </div>
+
+            <div class="task-levels">
+                <div class="level-card basic">
+                    <h4>Basic</h4>
+                    <p>Create the flowchart for a simple program</p>
+                </div>
+                <div class="level-card challenging">
+                    <h4>Challenging</h4>
+                    <p>Create a well-mapped flowchart with correct syntax</p>
+                </div>
+                <div class="level-card extension">
+                    <h4>Extension</h4>
+                    <p>Map your pygame project idea using a flowchart</p>
+                </div>
+            </div>
+
+            <div class="submit-reminder">
+                <p><strong>📸 Please submit a screenshot of your flowchart to the classroom before the end of the session</strong></p>
+            </div>
+        </section>
+
+        <section id="summary" class="lesson-section">
+            <h2>Lesson Summary</h2>
+            
+            <div class="plenary-section">
+                <h3>Python Playground Plenary</h3>
+                <p>Join the Python playground plenary session</p>
+            </div>
+
+            <div class="notes-section">
+                <h3>Notes</h3>
+                <ul>
+                    <li>Arrival time 88%</li>
+                    <li>ILPs - 5 mins each</li>
+                    <li>Homework</li>
+                </ul>
+            </div>
+
+            <div class="closing-message">
+                <h3>Well done and keep coding!</h3>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Unit 12: Software Development - Ada, the National College for Digital Skills</p>
+            <p>Lesson 16: Flowcharts (Part 1) - Christopher Moss</p>
+        </div>
+    </footer>
+</body>
+</html>

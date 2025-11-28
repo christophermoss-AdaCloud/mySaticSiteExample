@@ -1,0 +1,755 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.course-info {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.instructor-info {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+.date-info {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 0.25rem;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #34495e;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #3498db;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.lesson-section {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-section h2 {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* Learning Objectives */
+.learning-objectives {
+    background: #e8f4fd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.learning-objectives h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.learning-objectives ul {
+    margin-left: 1.5rem;
+}
+
+.learning-objectives li {
+    margin-bottom: 0.5rem;
+}
+
+/* Content Blocks */
+.content-block {
+    margin-bottom: 2rem;
+}
+
+.content-block h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+/* Info Box */
+.info-box {
+    background: #fff3cd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+    margin: 1rem 0;
+}
+
+.info-box h4 {
+    color: #856404;
+    margin-bottom: 0.5rem;
+}
+
+.info-box ul {
+    margin-left: 1.5rem;
+}
+
+/* Symbols Grid */
+.symbols-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.symbol-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+}
+
+.symbol-card p {
+    margin: 0.5rem 0;
+}
+
+.symbol-card code {
+    display: block;
+    background: #e9ecef;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+/* Symbol Shapes */
+.symbol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: white;
+    min-height: 60px;
+    min-width: 120px;
+}
+
+.symbol.oval {
+    background: #27ae60;
+    border-radius: 50px;
+    padding: 15px 30px;
+}
+
+.symbol.rectangle {
+    background: #3498db;
+    padding: 15px 30px;
+}
+
+.symbol.diamond {
+    background: #e74c3c;
+    transform: rotate(45deg);
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+}
+
+.symbol.diamond span,
+.symbol.diamond {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.symbol.parallelogram {
+    background: #9b59b6;
+    transform: skewX(-20deg);
+    padding: 15px 30px;
+}
+
+.symbol.arrow {
+    background: #34495e;
+    font-size: 2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.symbol.connector {
+    background: #f39c12;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+/* Mapping Table */
+.mapping-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.mapping-table th,
+.mapping-table td {
+    border: 1px solid #dee2e6;
+    padding: 1rem;
+    text-align: left;
+}
+
+.mapping-table th {
+    background: #3498db;
+    color: white;
+}
+
+.mapping-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.mapping-table code {
+    background: #e9ecef;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+}
+
+/* Example Container */
+.example-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .example-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.flowchart-description {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.flowchart-description h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.flowchart-description ol {
+    margin-left: 1.5rem;
+}
+
+.flowchart-description li {
+    margin-bottom: 0.5rem;
+}
+
+/* Step Type Labels */
+.step-type {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+}
+
+.oval-step {
+    background: #27ae60;
+    color: white;
+}
+
+.rect-step {
+    background: #3498db;
+    color: white;
+}
+
+.diamond-step {
+    background: #e74c3c;
+    color: white;
+}
+
+.para-step {
+    background: #9b59b6;
+    color: white;
+}
+
+/* Code Examples */
+.code-example {
+    background: #2c3e50;
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: white;
+}
+
+.code-example h4 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.code-example pre {
+    background: #1a252f;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.code-example code {
+    color: #98fb98;
+    font-family: 'Courier New', Consolas, monospace;
+    line-height: 1.5;
+}
+
+/* Best Practices */
+.best-practices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.practice-item {
+    background: #e8f4fd;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.practice-item h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* Activity Cards */
+.activity-card {
+    background: #fff;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.activity-card h3 {
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.activity-content {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.activity-content blockquote {
+    background: #e8f4fd;
+    padding: 1rem;
+    border-left: 4px solid #3498db;
+    font-style: italic;
+}
+
+.activity-content ol,
+.activity-content ul {
+    margin-left: 1.5rem;
+}
+
+/* Summary Section */
+.summary-content {
+    margin-bottom: 2rem;
+}
+
+.key-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.key-point {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.key-point h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Homework Section */
+.homework-section {
+    background: #ffeaa7;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.homework-section h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.homework-section ol {
+    margin-left: 1.5rem;
+}
+
+.homework-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Next Lesson Preview */
+.next-lesson {
+    background: #e8f4fd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.next-lesson h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.next-lesson ul {
+    margin-left: 1.5rem;
+}
+
+/* Footer Styles */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-content p {
+    margin: 0.25rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem;
+    }
+
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .lesson-section {
+        padding: 1.5rem;
+    }
+
+    .symbols-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mapping-table {
+        font-size: 0.9rem;
+    }
+
+    .mapping-table th,
+    .mapping-table td {
+        padding: 0.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    nav {
+        display: none;
+    }
+
+    .lesson-section {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        break-inside: avoid;
+    }
+
+    footer {
+        background: white;
+        color: #333;
+        border-top: 1px solid #ccc;
+    }
+}
+
+/* DoNow Section */
+.donow-section {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+}
+
+.donow-section h2 {
+    color: white;
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+.donow-content {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.3rem;
+}
+
+/* Definition Box */
+.definition-box {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.benefit-item {
+    background: #e8f4fd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    text-align: center;
+}
+
+.benefit-item h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* RPS Flowchart */
+.rps-flowchart {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid #3498db;
+}
+
+.flowchart-steps {
+    margin-left: 1.5rem;
+}
+
+.flowchart-steps li {
+    margin-bottom: 0.75rem;
+}
+
+.flowchart-steps ul {
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+/* Task Section */
+.task-instructions {
+    text-align: center;
+    background: #e8f4fd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.tool-link {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.tool-link:hover {
+    background: #2980b9;
+}
+
+/* Game Options */
+.game-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.game-card {
+    background: white;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(52, 152, 219, 0.3);
+}
+
+.game-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.game-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Task Levels */
+.task-levels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.level-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.level-card.basic {
+    background: #d5f4e6;
+    border: 2px solid #27ae60;
+}
+
+.level-card.challenging {
+    background: #fff3cd;
+    border: 2px solid #f39c12;
+}
+
+.level-card.extension {
+    background: #fadbd8;
+    border: 2px solid #e74c3c;
+}
+
+.level-card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Submit Reminder */
+.submit-reminder {
+    background: #2c3e50;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Plenary Section */
+.plenary-section {
+    background: #e8f4fd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.plenary-section h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* Notes Section */
+.notes-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.notes-section h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.notes-section ul {
+    margin-left: 1.5rem;
+}
+
+.notes-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Closing Message */
+.closing-message {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.closing-message h3 {
+    font-size: 1.5rem;
+}
